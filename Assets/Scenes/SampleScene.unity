@@ -564,7 +564,7 @@ MonoBehaviour:
   plankCount: 6
   openingSize: {x: 3.969346, y: 1.9}
   openingBottom: 0.3
-  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
+  plankMaterial: {fileID: 2100000, guid: a6497144be4751d42b8cd6666daf157e, type: 2}
   holeMaterial: {fileID: 0}
   buildAlcove: 0
   alcoveDepth: 1.1
@@ -646,7 +646,7 @@ MonoBehaviour:
   plankCount: 6
   openingSize: {x: 4.9616833, y: 1.9}
   openingBottom: 0.3
-  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
+  plankMaterial: {fileID: 2100000, guid: a6497144be4751d42b8cd6666daf157e, type: 2}
   holeMaterial: {fileID: 0}
   buildAlcove: 0
   alcoveDepth: 1.1
@@ -832,7 +832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlickerLight
   mode: 0
-  baseIntensity: 0.55
+  baseIntensity: 0.35
   dropoutRate: 0.35
   pulseSpeed: 0.5
   tube: {fileID: 526491059}
@@ -849,8 +849,8 @@ Light:
   serializedVersion: 13
   m_Type: 2
   m_Color: {r: 0.8, g: 0.95, b: 0.75, a: 1}
-  m_Intensity: 0.55
-  m_Range: 5
+  m_Intensity: 0.35
+  m_Range: 4.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -1722,6 +1722,7 @@ GameObject:
   - component: {fileID: 445641978}
   - component: {fileID: 445641981}
   - component: {fileID: 445641980}
+  - component: {fileID: 445641982}
   m_Layer: 0
   m_Name: Zombie System
   m_TagString: Untagged
@@ -1791,7 +1792,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2076426751}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &445641974
@@ -1925,15 +1927,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DarkAmbience
   moonLight: {fileID: 1815318736}
-  moonIntensity: 0.08
+  moonIntensity: 0.05
   moonColor: {r: 0.55, g: 0.65, b: 0.9, a: 1}
-  ambientColor: {r: 0.14, g: 0.145, b: 0.16, a: 1}
+  ambientColor: {r: 0.085, g: 0.088, b: 0.1, a: 1}
   fogColor: {r: 0.07, g: 0.078, b: 0.075, a: 1}
   fogMode: 1
   fogStart: 1
   fogEnd: 8
   fogDensity: 0.16
-  droneVolume: 0.35
+  droneVolume: 0.2
   distantClips:
   - {fileID: 8300000, guid: 031edb2b66dacf14fa978ecf849cd202, type: 3}
   - {fileID: 8300000, guid: e4d186302fcd70e4492caa7a61ec3d59, type: 3}
@@ -1991,6 +1993,26 @@ MonoBehaviour:
   fogHeight: 0.25
   fogSize: {x: 2.5, y: 5}
   fogColor: {r: 0.6, g: 0.65, b: 0.62, a: 0.09}
+--- !u!114 &445641982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445641970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4fc4a0c8f84bfb44888730f0aa71328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CatScare
+  catPrefab: {fileID: 3458153147975609641, guid: d8997bcd5f0f04047a0e2476f413e194, type: 3}
+  meow: {fileID: 8300000, guid: 97af2a79ab2649642b7f1d2b187bc35c, type: 3}
+  interval: {x: 45, y: 100}
+  firstDelay: 25
+  runSpeed: 3.2
+  behindDistance: 1.4
+  halfRun: 2.5
+  onlyDuringGame: 1
 --- !u!64 &446258755
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3615,7 +3637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlickerLight
   mode: 1
-  baseIntensity: 0.9
+  baseIntensity: 0.6
   dropoutRate: 0.35
   pulseSpeed: 0.5
   tube: {fileID: 1652602136}
@@ -3632,7 +3654,7 @@ Light:
   serializedVersion: 13
   m_Type: 2
   m_Color: {r: 1, g: 0.12, b: 0.06, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 0.6
   m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4239,7 +4261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlickerLight
   mode: 0
-  baseIntensity: 0.55
+  baseIntensity: 0.35
   dropoutRate: 0.35
   pulseSpeed: 0.5
   tube: {fileID: 2058338069}
@@ -4256,8 +4278,8 @@ Light:
   serializedVersion: 13
   m_Type: 2
   m_Color: {r: 0.8, g: 0.95, b: 0.75, a: 1}
-  m_Intensity: 0.55
-  m_Range: 5
+  m_Intensity: 0.35
+  m_Range: 4.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -4652,7 +4674,7 @@ MonoBehaviour:
   plankCount: 6
   openingSize: {x: 0.8977604, y: 1.9}
   openingBottom: 0.3
-  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
+  plankMaterial: {fileID: 2100000, guid: a6497144be4751d42b8cd6666daf157e, type: 2}
   holeMaterial: {fileID: 0}
   buildAlcove: 0
   alcoveDepth: 1.1
@@ -8193,7 +8215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlickerLight
   mode: 0
-  baseIntensity: 0.55
+  baseIntensity: 0.35
   dropoutRate: 0.35
   pulseSpeed: 0.5
   tube: {fileID: 374567893}
@@ -8210,8 +8232,8 @@ Light:
   serializedVersion: 13
   m_Type: 2
   m_Color: {r: 0.8, g: 0.95, b: 0.75, a: 1}
-  m_Intensity: 0.55
-  m_Range: 5
+  m_Intensity: 0.35
+  m_Range: 4.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -8756,7 +8778,7 @@ MonoBehaviour:
   plankCount: 6
   openingSize: {x: 3.709752, y: 1.9}
   openingBottom: 0.3
-  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
+  plankMaterial: {fileID: 2100000, guid: a6497144be4751d42b8cd6666daf157e, type: 2}
   holeMaterial: {fileID: 0}
   buildAlcove: 0
   alcoveDepth: 1.1
@@ -9622,7 +9644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlickerLight
   mode: 0
-  baseIntensity: 0.55
+  baseIntensity: 0.35
   dropoutRate: 0.35
   pulseSpeed: 0.5
   tube: {fileID: 19495621}
@@ -9639,8 +9661,8 @@ Light:
   serializedVersion: 13
   m_Type: 2
   m_Color: {r: 0.8, g: 0.95, b: 0.75, a: 1}
-  m_Intensity: 0.55
-  m_Range: 5
+  m_Intensity: 0.35
+  m_Range: 4.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -10265,7 +10287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlickerLight
   mode: 0
-  baseIntensity: 0.55
+  baseIntensity: 0.35
   dropoutRate: 0.35
   pulseSpeed: 0.5
   tube: {fileID: 529175284}
@@ -10282,8 +10304,8 @@ Light:
   serializedVersion: 13
   m_Type: 2
   m_Color: {r: 0.8, g: 0.95, b: 0.75, a: 1}
-  m_Intensity: 0.55
-  m_Range: 5
+  m_Intensity: 0.35
+  m_Range: 4.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -10891,7 +10913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlickerLight
   mode: 1
-  baseIntensity: 0.9
+  baseIntensity: 0.6
   dropoutRate: 0.35
   pulseSpeed: 0.5
   tube: {fileID: 2010877070}
@@ -10908,7 +10930,7 @@ Light:
   serializedVersion: 13
   m_Type: 2
   m_Color: {r: 1, g: 0.12, b: 0.06, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 0.6
   m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -11140,6 +11162,135 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 474008051881325395, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
+--- !u!1 &2076426750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2076426751}
+  - component: {fileID: 2076426752}
+  m_Layer: 0
+  m_Name: Background Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2076426751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076426750}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 445641973}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2076426752
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076426750}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 2dc4ef2c2778da64e81f9df82b7f885b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.35
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 0
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!64 &2090269306
 MeshCollider:
   m_ObjectHideFlags: 0

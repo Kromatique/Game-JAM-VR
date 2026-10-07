@@ -110,6 +110,7 @@ public class Barricade : MonoBehaviour
     }
 
     readonly List<Slot> slots = new List<Slot>();
+    static readonly int BaseMapST = Shader.PropertyToID("_BaseMap_ST");
     AudioSource audioSource;
     static AudioClip crackClip, hammerClip;
     WaveManager waves;
@@ -317,7 +318,13 @@ public class Barricade : MonoBehaviour
             p.transform.localPosition = slot.localPos;
             p.transform.localRotation = slot.localRot;
             p.transform.localScale = new Vector3(openingSize.x + (buildAlcove ? 0.35f : 0.15f), Mathf.Min(step * 0.7f, 0.2f), 0.04f);
-            if (plankMaterial != null) p.GetComponent<Renderer>().sharedMaterial = plankMaterial;
+            var r = p.GetComponent<Renderer>();
+            if (plankMaterial != null) r.sharedMaterial = plankMaterial;
+            // Repeat the wood along long planks (about one texture per 1.3 m) and offset each plank.
+            var block = new MaterialPropertyBlock();
+            float tiles = Mathf.Max(1f, Mathf.Round(p.transform.localScale.x / 1.3f));
+            block.SetVector(BaseMapST, new Vector4(tiles, 1f, Random.value, Random.value < 0.5f ? 0f : 0.5f));
+            r.SetPropertyBlock(block);
             slots.Add(slot);
         }
     }
