@@ -24,17 +24,23 @@ public class Barricade : MonoBehaviour
     public Material holeMaterial;
 
     [Header("Alcove")]
+    [Tooltip("Build a boarded recess sticking out of a plain wall. Off when the barricade sits on an existing window.")]
+    public bool buildAlcove = false;
     [Tooltip("Depth of the boarded window recess behind the planks (zombies stand in it).")]
     public float alcoveDepth = 1.1f;
     public Material frameMaterial;
 
     [Header("Zombies")]
-    [Tooltip("Where the first zombie stands outside, along -forward.")]
-    public float outsideDistance = 0.5f;
-    [Tooltip("Spacing of the zombies queuing behind the first one.")]
-    public float queueSpacing = 0.7f;
+    [Tooltip("Where zombies stand outside the boards, along -forward.")]
+    public float outsideDistance = 0.55f;
+    [Tooltip("Side spacing of the zombies attacking the boards together.")]
+    public float attackerSpacing = 1.0f;
+    [Tooltip("Spacing of the zombies waiting behind the attackers.")]
+    public float queueSpacing = 0.8f;
     [Tooltip("Where zombies land inside, along +forward.")]
     public float insideDistance = 0.9f;
+    [Tooltip("Zombies spawn this far behind the window (min, max), out in the room behind.")]
+    public Vector2 spawnDistance = new Vector2(2.5f, 5f);
 
     [Header("Repair")]
     public float repairRange = 1.7f;
@@ -48,11 +54,51 @@ public class Barricade : MonoBehaviour
     /// <summary>Zombies waiting at this window, first one is tearing the planks.</summary>
     public readonly List<ZombieBreach> Queue = new List<ZombieBreach>();
 
-    /// <summary>Queue slot: the first right behind the planks, the others hidden past the back of the recess.</summary>
+    /// <summary>How many zombies fit side by side against the boards.</summary>
+    public int AttackSlots => Mathf.Max(1, Mathf.FloorToInt(openingSize.x / attackerSpacing));
+    public bool IsAttackSlot(int index) => index >= 0 && index < AttackSlots;
+
+    /// <summary>Side offset of a slot along the window, centered: 0, +1, -1, +2...</summary>
+    float Lateral(int slot)
+    {
+        int n = AttackSlots;
+        float span = (n - 1) * attackerSpacing;
+        return n <= 1 ? 0f : -span * 0.5f + attackerSpacing * (slot % n);
+    }
+
+    /// <summary>Attackers stand against the boards spread along the window, the others wait behind them.</summary>
     public Vector3 QueuePoint(int index)
     {
-        float d = outsideDistance + (index > 0 ? alcoveDepth - outsideDistance + queueSpacing * index : 0f);
-        return transform.position - transform.forward * d + transform.right * (index % 2 == 0 ? 0f : 0.3f);
+        float lateral = Lateral(index);
+        float d = outsideDistance;
+        if (buildAlcove) d += index > 0 ? alcoveDepth - outsideDistance + queueSpacing * index : 0f;
+        else if (!IsAttackSlot(index)) d += queueSpacing * (1 + (index - AttackSlots) / AttackSlots);
+        if (buildAlcove) lateral = index % 2 == 0 ? 0f : 0.3f;
+        return transform.position - transform.forward * d + transform.right * lateral;
+    }
+
+    public Vector3 InsidePointFor(int slot) => transform.position + transform.forward * insideDistance + transform.right * Lateral(slot);
+
+    /// <summary>Random spot on the NavMesh in the room behind the window, connected to the boards.</summary>
+    public Vector3 SpawnPoint()
+    {
+        Vector3 boards = Snap(OutsidePoint);
+        for (int i = 0; i < 15; i++)
+        {
+            Vector3 p = transform.position - transform.forward * Random.Range(spawnDistance.x, spawnDistance.y)
+                        + transform.right * Random.Range(-openingSize.x, openingSize.x) * 0.5f;
+            if (!UnityEngine.AI.NavMesh.SamplePosition(p, out var hit, 1.5f, UnityEngine.AI.NavMesh.AllAreas)) continue;
+            var path = new UnityEngine.AI.NavMeshPath();
+            if (UnityEngine.AI.NavMesh.CalculatePath(hit.position, boards, UnityEngine.AI.NavMesh.AllAreas, path)
+                && path.status == UnityEngine.AI.NavMeshPathStatus.PathComplete)
+                return hit.position;
+        }
+        return boards;
+    }
+
+    public static Vector3 Snap(Vector3 p)
+    {
+        return UnityEngine.AI.NavMesh.SamplePosition(p, out var hit, 1f, UnityEngine.AI.NavMesh.AllAreas) ? hit.position : p;
     }
 
     class Slot
@@ -95,7 +141,7 @@ public class Barricade : MonoBehaviour
         if (crackClip == null) crackClip = CreateCrack();
         if (hammerClip == null) hammerClip = CreateHammer();
 
-        BuildHole();
+        if (buildAlcove) BuildHole();
         BuildPlanks();
         BuildPrompt();
 
@@ -119,8 +165,10 @@ public class Barricade : MonoBehaviour
     bool PlayerClose()
     {
         if (head == null) return false;
-        Vector3 d = head.position - transform.position;
-        d.y = 0f;
+        // Distance to the window segment, so wide windows can be repaired from either end.
+        Vector3 local = transform.InverseTransformPoint(head.position);
+        local.x = Mathf.Max(0f, Mathf.Abs(local.x) - openingSize.x * 0.5f);
+        Vector3 d = new Vector3(local.x, 0f, local.z);
         return d.magnitude < repairRange;
     }
 
@@ -261,13 +309,14 @@ public class Barricade : MonoBehaviour
             var slot = new Slot
             {
                 plank = p.transform,
-                localPos = new Vector3(Random.Range(-0.05f, 0.05f), openingBottom + step * (i + 0.5f), 0.06f + 0.015f * (i % 2)),
-                localRot = Quaternion.Euler(0f, 0f, Random.Range(-14f, 14f)),
+                localPos = new Vector3(Random.Range(-0.05f, 0.05f), openingBottom + step * (i + 0.5f), (buildAlcove ? 0.06f : 0.13f) + 0.015f * (i % 2)),
+                // Long planks on wide windows must stay almost level or they leave the frame.
+                localRot = Quaternion.Euler(0f, 0f, Random.Range(-1f, 1f) * Mathf.Min(14f, Mathf.Rad2Deg * Mathf.Atan2(step * 0.8f, openingSize.x * 0.5f))),
                 intact = true
             };
             p.transform.localPosition = slot.localPos;
             p.transform.localRotation = slot.localRot;
-            p.transform.localScale = new Vector3(openingSize.x + 0.35f, step * 0.7f, 0.04f);
+            p.transform.localScale = new Vector3(openingSize.x + (buildAlcove ? 0.35f : 0.15f), Mathf.Min(step * 0.7f, 0.2f), 0.04f);
             if (plankMaterial != null) p.GetComponent<Renderer>().sharedMaterial = plankMaterial;
             slots.Add(slot);
         }

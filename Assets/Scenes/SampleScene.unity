@@ -517,6 +517,66 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2363565981455421637, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
+--- !u!1 &150216919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150216920}
+  - component: {fileID: 150216921}
+  m_Layer: 0
+  m_Name: Fenetre Plane.132
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &150216920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150216919}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.21185453, y: -0.03, z: 4.7409306}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1164483276}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &150216921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150216919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0146c4d8b9c1ea04f9eee013cdf5b12c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Barricade
+  plankCount: 6
+  openingSize: {x: 3.969346, y: 1.9}
+  openingBottom: 0.3
+  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
+  holeMaterial: {fileID: 0}
+  buildAlcove: 0
+  alcoveDepth: 1.1
+  frameMaterial: {fileID: 0}
+  outsideDistance: 0.55
+  attackerSpacing: 1
+  queueSpacing: 0.8
+  insideDistance: 0.9
+  spawnDistance: {x: 2.5, y: 5}
+  repairRange: 1.7
+  repairCooldown: 0.8
+  repairOnlyBetweenWaves: 1
 --- !u!64 &154857515
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -539,6 +599,66 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8634288862841981749, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
+--- !u!1 &155930048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 155930049}
+  - component: {fileID: 155930050}
+  m_Layer: 0
+  m_Name: Fenetre Plane.131
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &155930049
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155930048}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -7.2253704, y: -0.03, z: 4.7420826}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1164483276}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &155930050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155930048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0146c4d8b9c1ea04f9eee013cdf5b12c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Barricade
+  plankCount: 6
+  openingSize: {x: 4.9616833, y: 1.9}
+  openingBottom: 0.3
+  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
+  holeMaterial: {fileID: 0}
+  buildAlcove: 0
+  alcoveDepth: 1.1
+  frameMaterial: {fileID: 0}
+  outsideDistance: 0.55
+  attackerSpacing: 1
+  queueSpacing: 0.8
+  insideDistance: 0.9
+  spawnDistance: {x: 2.5, y: 5}
+  repairRange: 1.7
+  repairCooldown: 0.8
+  repairOnlyBetweenWaves: 1
 --- !u!64 &164166511
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1047,63 +1167,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5923643309229979228, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
---- !u!1 &334717329
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 334717330}
-  - component: {fileID: 334717331}
-  m_Layer: 0
-  m_Name: Fenetre Est A
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &334717330
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334717329}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 14.29, y: -0.03, z: -4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 611924137}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &334717331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334717329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0146c4d8b9c1ea04f9eee013cdf5b12c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Barricade
-  plankCount: 5
-  openingSize: {x: 1.2, y: 1.3}
-  openingBottom: 0.55
-  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
-  holeMaterial: {fileID: 2100000, guid: adae5960f1104454ca96cbd14e908e2f, type: 2}
-  alcoveDepth: 1.1
-  frameMaterial: {fileID: 2100000, guid: 63dda1c7d1daeb747ac01e03ede68f93, type: 2}
-  outsideDistance: 0.5
-  queueSpacing: 0.7
-  insideDistance: 0.9
-  repairRange: 1.7
-  repairCooldown: 0.8
-  repairOnlyBetweenWaves: 1
 --- !u!64 &335418638
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2394,63 +2457,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3281868349948184078, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
---- !u!1 &568877106
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 568877107}
-  - component: {fileID: 568877108}
-  m_Layer: 0
-  m_Name: Fenetre Est B
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &568877107
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568877106}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 14.29, y: -0.03, z: 6}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 611924137}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &568877108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568877106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0146c4d8b9c1ea04f9eee013cdf5b12c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Barricade
-  plankCount: 5
-  openingSize: {x: 1.2, y: 1.3}
-  openingBottom: 0.55
-  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
-  holeMaterial: {fileID: 2100000, guid: adae5960f1104454ca96cbd14e908e2f, type: 2}
-  alcoveDepth: 1.1
-  frameMaterial: {fileID: 2100000, guid: 63dda1c7d1daeb747ac01e03ede68f93, type: 2}
-  outsideDistance: 0.5
-  queueSpacing: 0.7
-  insideDistance: 0.9
-  repairRange: 1.7
-  repairCooldown: 0.8
-  repairOnlyBetweenWaves: 1
 --- !u!64 &585084162
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2636,43 +2642,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &611924136
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 611924137}
-  m_Layer: 0
-  m_Name: Barricades
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &611924137
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611924136}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1359150836}
-  - {fileID: 1509290934}
-  - {fileID: 998178073}
-  - {fileID: 1445933838}
-  - {fileID: 334717330}
-  - {fileID: 568877107}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &612800339
@@ -4135,63 +4104,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7616905252567663358, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
---- !u!1 &998178072
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 998178073}
-  - component: {fileID: 998178074}
-  m_Layer: 0
-  m_Name: Fenetre Nord
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &998178073
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998178072}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -6, y: -0.03, z: 10.58}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 611924137}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &998178074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998178072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0146c4d8b9c1ea04f9eee013cdf5b12c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Barricade
-  plankCount: 5
-  openingSize: {x: 1.2, y: 1.3}
-  openingBottom: 0.55
-  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
-  holeMaterial: {fileID: 2100000, guid: adae5960f1104454ca96cbd14e908e2f, type: 2}
-  alcoveDepth: 1.1
-  frameMaterial: {fileID: 2100000, guid: 63dda1c7d1daeb747ac01e03ede68f93, type: 2}
-  outsideDistance: 0.5
-  queueSpacing: 0.7
-  insideDistance: 0.9
-  repairRange: 1.7
-  repairCooldown: 0.8
-  repairOnlyBetweenWaves: 1
 --- !u!64 &1007390934
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4693,6 +4605,66 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8164286944384438693, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
+--- !u!1 &1137904295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1137904296}
+  - component: {fileID: 1137904297}
+  m_Layer: 0
+  m_Name: Fenetre Plane.135
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1137904296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137904295}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 2.0810876, y: -0.03, z: 5.4124274}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1164483276}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1137904297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137904295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0146c4d8b9c1ea04f9eee013cdf5b12c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Barricade
+  plankCount: 6
+  openingSize: {x: 0.8977604, y: 1.9}
+  openingBottom: 0.3
+  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
+  holeMaterial: {fileID: 0}
+  buildAlcove: 0
+  alcoveDepth: 1.1
+  frameMaterial: {fileID: 0}
+  outsideDistance: 0.55
+  attackerSpacing: 1
+  queueSpacing: 0.8
+  insideDistance: 0.9
+  spawnDistance: {x: 2.5, y: 5}
+  repairRange: 1.7
+  repairCooldown: 0.8
+  repairOnlyBetweenWaves: 1
 --- !u!64 &1140226322
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4825,6 +4797,41 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6575370180571937746, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
+--- !u!1 &1164483275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164483276}
+  m_Layer: 0
+  m_Name: Barricades
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1164483276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164483275}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 155930049}
+  - {fileID: 150216920}
+  - {fileID: 1552200919}
+  - {fileID: 1137904296}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1208099012
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5408,10 +5415,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7450352846214997514, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -6871373210529764610, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: ab7f5af078c8d2e4d99a03632483bcce, type: 2}
+    - target: {fileID: -6315767280932111537, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -5761388358724033516, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -5448,6 +5463,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapZV1
       objectReference: {fileID: 0}
+    - target: {fileID: 1069122884662846184, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398253756592421668, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2024828905838756574, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -5464,14 +5487,26 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: ab7f5af078c8d2e4d99a03632483bcce, type: 2}
+    - target: {fileID: 3497853504513812337, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4060196467689317276, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 137b26b694b4ee94d9315cfbdbe457dc, type: 2}
+    - target: {fileID: 4807175094639319364, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5185679287687001067, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: ab7f5af078c8d2e4d99a03632483bcce, type: 2}
+    - target: {fileID: 5510475879726623224, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5823080238898326583, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -5495,6 +5530,10 @@ PrefabInstance:
     - target: {fileID: 7531276598253260430, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
       propertyPath: m_LocalPosition.z
       value: 4.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684375355237957732, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8123353289388072957, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -7697,63 +7736,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8189187054471903785, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
---- !u!1 &1359150835
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1359150836}
-  - component: {fileID: 1359150837}
-  m_Layer: 0
-  m_Name: Fenetre Ouest A
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1359150836
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359150835}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -15.25, y: -0.03, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 611924137}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1359150837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359150835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0146c4d8b9c1ea04f9eee013cdf5b12c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Barricade
-  plankCount: 5
-  openingSize: {x: 1.2, y: 1.3}
-  openingBottom: 0.55
-  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
-  holeMaterial: {fileID: 2100000, guid: adae5960f1104454ca96cbd14e908e2f, type: 2}
-  alcoveDepth: 1.1
-  frameMaterial: {fileID: 2100000, guid: 63dda1c7d1daeb747ac01e03ede68f93, type: 2}
-  outsideDistance: 0.5
-  queueSpacing: 0.7
-  insideDistance: 0.9
-  repairRange: 1.7
-  repairCooldown: 0.8
-  repairOnlyBetweenWaves: 1
 --- !u!1001 &1373153106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8304,63 +8286,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1099125063201458506, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
---- !u!1 &1445933837
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1445933838}
-  - component: {fileID: 1445933839}
-  m_Layer: 0
-  m_Name: Fenetre Sud
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1445933838
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445933837}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: -0.03, z: -13.78}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 611924137}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1445933839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445933837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0146c4d8b9c1ea04f9eee013cdf5b12c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Barricade
-  plankCount: 5
-  openingSize: {x: 1.2, y: 1.3}
-  openingBottom: 0.55
-  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
-  holeMaterial: {fileID: 2100000, guid: adae5960f1104454ca96cbd14e908e2f, type: 2}
-  alcoveDepth: 1.1
-  frameMaterial: {fileID: 2100000, guid: 63dda1c7d1daeb747ac01e03ede68f93, type: 2}
-  outsideDistance: 0.5
-  queueSpacing: 0.7
-  insideDistance: 0.9
-  repairRange: 1.7
-  repairCooldown: 0.8
-  repairOnlyBetweenWaves: 1
 --- !u!64 &1450587767
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8713,63 +8638,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8867964356121730547, guid: 168ec9944738a9f4fa0f41742170a132, type: 3}
---- !u!1 &1509290933
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1509290934}
-  - component: {fileID: 1509290935}
-  m_Layer: 0
-  m_Name: Fenetre Ouest B
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1509290934
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509290933}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -15.25, y: -0.03, z: 8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 611924137}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1509290935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509290933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0146c4d8b9c1ea04f9eee013cdf5b12c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Barricade
-  plankCount: 5
-  openingSize: {x: 1.2, y: 1.3}
-  openingBottom: 0.55
-  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
-  holeMaterial: {fileID: 2100000, guid: adae5960f1104454ca96cbd14e908e2f, type: 2}
-  alcoveDepth: 1.1
-  frameMaterial: {fileID: 2100000, guid: 63dda1c7d1daeb747ac01e03ede68f93, type: 2}
-  outsideDistance: 0.5
-  queueSpacing: 0.7
-  insideDistance: 0.9
-  repairRange: 1.7
-  repairCooldown: 0.8
-  repairOnlyBetweenWaves: 1
 --- !u!64 &1543801680
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8841,6 +8709,66 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 12bd4b8ecc486d84b9e059255860c49b, type: 2}
+--- !u!1 &1552200918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552200919}
+  - component: {fileID: 1552200920}
+  m_Layer: 0
+  m_Name: Fenetre Plane.134
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1552200919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552200918}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 2.0810876, y: -0.03, z: 9.4150505}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1164483276}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1552200920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552200918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0146c4d8b9c1ea04f9eee013cdf5b12c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Barricade
+  plankCount: 6
+  openingSize: {x: 3.709752, y: 1.9}
+  openingBottom: 0.3
+  plankMaterial: {fileID: 2100000, guid: b2dafac3628f98249a64a159f7b600ce, type: 2}
+  holeMaterial: {fileID: 0}
+  buildAlcove: 0
+  alcoveDepth: 1.1
+  frameMaterial: {fileID: 0}
+  outsideDistance: 0.55
+  attackerSpacing: 1
+  queueSpacing: 0.8
+  insideDistance: 0.9
+  spawnDistance: {x: 2.5, y: 5}
+  repairRange: 1.7
+  repairCooldown: 0.8
+  repairOnlyBetweenWaves: 1
 --- !u!64 &1565267599
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11665,4 +11593,4 @@ SceneRoots:
   - {fileID: 196853362}
   - {fileID: 1301328030}
   - {fileID: 1344664712}
-  - {fileID: 611924137}
+  - {fileID: 1164483276}

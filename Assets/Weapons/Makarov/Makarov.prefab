@@ -238,7 +238,7 @@ MonoBehaviour:
   range: 80
   hitMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294967291
   impactForce: 4
   magazineSize: 8
   reloadTime: 1.05

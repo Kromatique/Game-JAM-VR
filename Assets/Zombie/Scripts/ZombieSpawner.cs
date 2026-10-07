@@ -127,7 +127,7 @@ public class ZombieSpawner : MonoBehaviour
     /// <summary>Spawns a zombie outside a boarded window; it tears the planks off before coming in.</summary>
     public GameObject SpawnAtBarricade(Barricade barricade, GameObject prefab)
     {
-        var go = Instantiate(prefab, barricade.OutsidePoint, Quaternion.LookRotation(barricade.transform.forward));
+        var go = Instantiate(prefab, barricade.SpawnPoint(), Quaternion.LookRotation(barricade.transform.forward));
         PS1Style.Apply(go);
         var health = go.GetComponent<ZombieHealth>();
         if (health)
